@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Search, MapPin, ChevronDown } from 'lucide-react'
-import { Button } from '../../components/Button';
+import { Button } from '../../components/Button'
 const aktauDistricts = [
     'Мкр 1', 'Мкр 2', 'Мкр 3', 'Мкр 4', 'Мкр 5',
     'Мкр 6', 'Мкр 7', 'Мкр 8', 'Мкр 9', 'Мкр 10',
@@ -9,7 +9,6 @@ const aktauDistricts = [
 ]
 
 const jobTypes = ['Полная занятость', 'Частичная занятость', 'Удалённая работа', 'Стажировка']
-const experienceLevels = ['Без опыта', '1-3 года', '3-5 лет', '5+ лет']
 
 export function SearchBar() {
     const [districtOpen, setDistrictOpen] = useState(false)
@@ -61,9 +60,7 @@ export function SearchBar() {
                 </div>
 
                 {/* Search Button */}
-                <Button>
-                    Найти
-                </Button>
+                <Button>Найти</Button>
             </div>
 
             {/* Quick Filters */}

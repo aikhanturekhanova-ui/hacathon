@@ -1,20 +1,19 @@
-import React from 'react';
+import type { ReactNode } from 'react'
 
-// Добавляем описание для TypeScript
 interface ButtonProps {
-    onClick?: () => void;
-    children: React.ReactNode;
+    onClick?: () => void
+    children: ReactNode
 }
 
 export const Button = ({ onClick, children }: ButtonProps) => {
     return (
         <button
             onClick={onClick}
-            // Добавляем те самые отступы (padding), чтобы текст не лип к краям
-            className="w-full px-6 py-4 text-left text-gray-300 hover:text-white hover:bg-white/10 transition-all rounded-xl border border-white/5 bg-white/5"
+            type="button"
+            className="px-6 py-4 rounded-xl font-medium text-white bg-gradient-to-r from-[#0052FF] to-[#00FFB9] hover:shadow-lg hover:shadow-[#0052FF]/30 transition-all"
         >
             {children}
         </button>
-    );
-};
+    )
+}
 

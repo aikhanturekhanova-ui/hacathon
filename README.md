@@ -1,16 +1,9 @@
-<<<<<<< HEAD
+# Zhumys Job Platform Design
 
-  # Zhumys Job Platform Design
+This is a code bundle for Zhumys Job Platform Design. The original project is available at [Figma](https://www.figma.com/design/Z2k4aURRIEfKBbpMFcgnr3/Zhumys-Job-Platform-Design).
 
-  This is a code bundle for Zhumys Job Platform Design. The original project is available at https://www.figma.com/design/Z2k4aURRIEfKBbpMFcgnr3/Zhumys-Job-Platform-Design.
+## Running the code
 
-  ## Running the code
+Run `npm i` to install dependencies.
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
-=======
-# sdfghjk
-sdfghjkl
->>>>>>> 024797056e7ef676a8674f106b09c5d649831fa4
+Run `npm run dev` to start the development server.
