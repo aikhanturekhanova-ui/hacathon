@@ -1,0 +1,59 @@
+
+╔════════════════════════════════════════════════════════╗
+║  🎉 BATYS.HUB теперь Progressive Web App (PWA)!       ║
+╚════════════════════════════════════════════════════════╝
+
+✅ Что добавлено:
+  📱 InstallPWA компонент (промпт установки)
+  🌐 OfflineBanner (индикатор оффлайн)
+  ⚙️  Service Worker template
+  📄 Web App Manifest
+  📚 Полная документация
+
+📁 Новые файлы:
+  ├─ src/pwa/register-sw.ts        (PWA утилиты)
+  ├─ src/app/components/InstallPWA.tsx
+  ├─ src/app/components/OfflineBanner.tsx
+  ├─ public/manifest.json
+  ├─ public/sw-template.txt        (переименуйте в sw.js)
+  ├─ PWA_SETUP.md                  (инструкция)
+  └─ CREATE_ICONS.md               (как создать иконки)
+
+🚀 Что нужно сделать:
+
+1️⃣  Создайте иконки (см. CREATE_ICONS.md):
+    • icon-192.png
+    • icon-512.png
+    • icon-apple.png
+    • icon-96.png
+
+2️⃣  Переименуйте service worker:
+    mv public/sw-template.txt public/sw.js
+
+3️⃣  Перезапустите приложение:
+    pnpm dev
+
+4️⃣  Протестируйте:
+    • Откройте в Chrome
+    • DevTools → Application → Manifest
+    • Кликните "Install" в адресной строке
+
+5️⃣  Задеплойте на production:
+    • Vercel: vercel --prod
+    • Netlify: netlify deploy --prod
+
+📖 Документация:
+  • PWA_SETUP.md - полная инструкция
+  • CREATE_ICONS.md - создание иконок
+  • DESIGN_SYSTEM.md - дизайн система
+  • EXPORT_COMPONENTS.md - экспорт кода
+
+💡 Возможности:
+  ✅ Установка на любое устройство
+  ✅ Работает оффлайн
+  ✅ Push-уведомления
+  ✅ Быстрая загрузка
+  ✅ Native-like опыт
+
+Готово к использованию! 🎯
+

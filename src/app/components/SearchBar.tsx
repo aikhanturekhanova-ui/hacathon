@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Search, MapPin, ChevronDown } from 'lucide-react'
-
+import { Button } from '../../components/Button';
 const aktauDistricts = [
     'Мкр 1', 'Мкр 2', 'Мкр 3', 'Мкр 4', 'Мкр 5',
     'Мкр 6', 'Мкр 7', 'Мкр 8', 'Мкр 9', 'Мкр 10',
@@ -61,9 +61,9 @@ export function SearchBar() {
                 </div>
 
                 {/* Search Button */}
-                <button className="gradient-button px-8 py-4 rounded-xl font-medium">
+                <Button>
                     Найти
-                </button>
+                </Button>
             </div>
 
             {/* Quick Filters */}

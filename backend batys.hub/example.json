@@ -1,0 +1,45 @@
+{
+    "info": {
+        "name": "ATS Scan",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Scan Resume",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"resume\": \"Иван Иванов\\nEmail: ivan@example.com\\nТелефон: +7 777 123 4567\\n\\nОПЫТ РАБОТЫ:\\nFrontend разработчик — ТОО 'Tech Company' (2021-2024)\\n- Разработка веб-приложений на React и TypeScript\\n- Работа с REST API и GraphQL\\n- Оптимизация производительности приложений\\n- Опыт работы с Git, Docker\\n\\nНАВЫКИ:\\nReact, TypeScript, JavaScript, HTML, CSS, Git, Docker, REST API, GraphQL\\n\\nОБРАЗОВАНИЕ:\\nБакалавр Computer Science — КазНУ (2017-2021)\",\n    \"job_description\": \"Требуется опытный frontend разработчик для работы над корпоративным порталом.\\n\\nТребования:\\n- Опыт работы с React от 3 лет\\n- Знание TypeScript\\n- Опыт работы с REST API\\n- Знание Git\\n- Опыт работы с Docker будет плюсом\\n\\nУсловия:\\n- Полная занятость\\n- Офис: Мкр 1, Актау\\n- Зарплата: 350 000 - 500 000 ₸\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/ats/scan",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["ats", "scan"]
+                }
+            },
+            "response": [
+                {
+                    "name": "Success",
+                    "status": "OK",
+                    "code": 200,
+                    "header": [{ "key": "Content-Type", "value": "application/json" }],
+                    "body": "{\n    \"score\": 85,\n    \"summary\": \"Кандидат хорошо соответствует требованиям вакансии. Имеет необходимый опыт работы с React и TypeScript, а также знание REST API и Git. Docker указан как плюс и также присутствует в резюме.\",\n    \"matched_keywords\": [\"React\", \"TypeScript\", \"REST API\", \"Git\", \"Docker\"],\n    \"missing_keywords\": [\"корпоративный портал\", \"3 года опыта явно\"],\n    \"suggestions\": [\n        \"Укажите явно количество лет опыта с React\",\n        \"Добавьте конкретные примеры корпоративных проектов\",\n        \"Упомяните опыт работы в команде\"\n    ]\n}"
+                }
+            ]
+        }
+    ]
+}

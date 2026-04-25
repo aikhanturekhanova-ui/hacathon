@@ -1,0 +1,73 @@
+{
+    "info": {
+        "name": "Resume API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Enhance Resume (AI)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"full_name\": \"Иван Иванов\",\n    \"email\": \"ivan@example.com\",\n    \"phone\": \"+7 777 123 4567\",\n    \"location\": \"Актау, Казахстан\",\n    \"position\": \"Frontend Разработчик\",\n    \"experience\": \"3 года опыта работы с React и TypeScript. Разработка корпоративных порталов.\",\n    \"skills\": \"React, TypeScript, JavaScript, Git, Docker, REST API\",\n    \"education\": \"Бакалавр Computer Science — КазНУ (2017-2021)\",\n    \"languages\": \"Казахский (родной), Русский (свободно), Английский (B2)\",\n    \"job_description\": \"Требуется frontend разработчик с опытом React от 3 лет\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/resume/enhance",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["resume", "enhance"]
+                }
+            },
+            "response": [
+                {
+                    "name": "Success",
+                    "status": "OK",
+                    "code": 200,
+                    "header": [{ "key": "Content-Type", "value": "application/json" }],
+                    "body": "{\n    \"summary\": \"Опытный Frontend разработчик с 3-летним стажем работы с React и TypeScript. Специализируется на разработке корпоративных порталов и веб-приложений.\",\n    \"experience\": \"Разработка высоконагруженных корпоративных порталов на React и TypeScript. Интеграция REST API, оптимизация производительности, работа в Agile-команде.\",\n    \"skills\": [\"React\", \"TypeScript\", \"JavaScript\", \"Git\", \"Docker\", \"REST API\"],\n    \"suggestions\": [\"Добавьте конкретные метрики достижений\", \"Укажите размер команд в которых работали\"]\n}"
+                }
+            ]
+        },
+        {
+            "name": "Export Resume PDF",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"full_name\": \"Иван Иванов\",\n    \"email\": \"ivan@example.com\",\n    \"phone\": \"+7 777 123 4567\",\n    \"location\": \"Актау, Казахстан\",\n    \"position\": \"Frontend Разработчик\",\n    \"experience\": \"3 года опыта работы с React и TypeScript. Разработка корпоративных порталов.\",\n    \"skills\": \"React, TypeScript, JavaScript, Git, Docker, REST API\",\n    \"education\": \"Бакалавр Computer Science — КазНУ (2017-2021)\",\n    \"languages\": \"Казахский (родной), Русский (свободно), Английский (B2)\",\n    \"job_description\": \"Требуется frontend разработчик с опытом React от 3 лет\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/resume/export/pdf",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["resume", "export", "pdf"]
+                }
+            }
+        }
+    ]
+}
