@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   # Zhumys Job Platform Design
 
@@ -9,3 +10,7 @@
 
   Run `npm run dev` to start the development server.
   
+=======
+# sdfghjk
+sdfghjkl
+>>>>>>> 024797056e7ef676a8674f106b09c5d649831fa4
